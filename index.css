@@ -3,7 +3,9 @@
     padding:0;
     box-sizing:border-box;
 }
-
+body {
+    padding-top: 90px;
+}
 html{
     scroll-behavior:smooth;
 }
@@ -371,15 +373,24 @@ a[download]:hover{
 .projectlinks a:hover {
     text-decoration: underline;
 }
-.yes {
+section.yes {
     display: none !important;
 }
 
-.yesactive {
+section.yesactive {
     display: block !important;
+    min-height: 100vh;
+    padding-top: 140px;
 }
 .fade-in {
     animation: fadeSection 0.4s ease forwards;
+}
+#about h2,
+#skills h2,
+#projects h2,
+#contact h2 {
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 @keyframes fadeSection {
