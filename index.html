@@ -5,234 +5,198 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shivam Mishra | Portfolio</title>
   <link rel="stylesheet" href="index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-
+ 
   <header>
-    <h2 class="logo">SM.</h2>
-    <nav>
+    <div class="logo"><span class="logo-bracket">&lt;</span>Shivam<span class="logo-bracket">/&gt;</span></div>
+    <nav id="mainNav">
       <ul>
-        <a href="#" data-section="home">Home</a>
-        <a href="#" data-section="about">About</a>
-        <a href="#" data-section="skills">Skills</a>
-        <a href="#" data-section="projects">Projects</a>
-        <a href="#" data-section="contact">Contact</a>
+        <li><a href="#" data-section="home" class="nav-link active">Home</a></li>
+        <li><a href="#" data-section="about" class="nav-link">About</a></li>
+        <li><a href="#" data-section="skills" class="nav-link">Skills</a></li>
+        <li><a href="#" data-section="projects" class="nav-link">Projects</a></li>
+        <li><a href="#" data-section="contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
+    <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
   </header>
-
+ 
   <!-- HOME -->
-  <section id="home" class="yesactive">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-    <div class="content">
-      <div class="text">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          Open to Internships &amp; Placements
+  <section id="home" class="section active">
+    <div class="home-wrap">
+      <div class="home-text">
+        <div class="home-badge">✦ Available for Internships</div>
+        <h1>Shivam<br><em>Mishra</em></h1>
+        <div class="role-line">
+          I'm a&nbsp;<span class="role-wrap"><span id="roleText"></span><span class="cursor">|</span></span>
         </div>
-        <h1>Shivam <span class="accent">Mishra</span></h1>
-        <h2 class="hero-sub">Full-Stack Developer &amp; CS (AI) Student</h2>
-        <p>Building real-world applications with clean architecture, efficient code, and end-to-end thinking.</p>
-        <div class="hero-actions">
-          <a href="cv.pdf" download class="btn btn-primary">↓ Download CV</a>
-          <a href="#" data-section="projects" class="btn btn-ghost">View Projects →</a>
+        <p class="home-bio">B.Tech CS (AI) student building full-stack web apps — from databases to deployment.</p>
+        <div class="home-actions">
+          <a href="cv.pdf" download class="btn-primary">Download CV</a>
+          <a href="#" data-section="projects" class="btn-ghost nav-link">View Projects →</a>
+        </div>
+        <div class="home-stats">
+          <div class="stat"><span class="stat-num">2+</span><span class="stat-lbl">Projects</span></div>
+          <div class="stat-sep"></div>
+          <div class="stat"><span class="stat-num">2nd</span><span class="stat-lbl">Year</span></div>
+          <div class="stat-sep"></div>
+          <div class="stat"><span class="stat-num">AI</span><span class="stat-lbl">Specialisation</span></div>
         </div>
       </div>
-      <div class="image">
-        <img src="abc.jpeg" alt="Shivam Mishra">
+      <div class="home-img-wrap">
+        <div class="img-deco-ring"></div>
+        <div class="img-box">
+          <img src="abc.jpeg" alt="Shivam Mishra">
+        </div>
+        <div class="img-dot-grid"></div>
       </div>
     </div>
   </section>
-
+ 
   <!-- ABOUT -->
-  <section id="about" class="yes">
-    <div class="aboutcontainer">
-      <div class="section-label">About Me</div>
-      <h2>Who I Am</h2>
-      <div class="about-grid">
+  <section id="about" class="section">
+    <div class="section-inner">
+      <div class="sec-label">01 — About</div>
+      <h2 class="sec-title">Who I Am</h2>
+      <div class="about-layout">
         <div class="about-text">
-          <p>I'm a second-year B.Tech Computer Science (AI) student, focused on building a strong foundation in Data Structures, Algorithms, and full-stack Web Development.</p>
-          <p>I enjoy building end-to-end applications — from designing REST APIs and database schemas to crafting clean, responsive frontends. I care about writing efficient code and understanding how systems work under the hood.</p>
-          <p>Beyond academics, I actively follow financial markets and trading strategies, which has sharpened my analytical thinking. I also play cricket, which has built my teamwork and consistency.</p>
+          <p>I'm a second-year B.Tech Computer Science (AI) student at Manipal Institute of Technology, Bengaluru. My focus is on building full-stack applications that are clean, efficient, and solve real problems — not just writing code that runs.</p>
+          <p>On the backend I work with Node.js, Express.js, and MySQL — implementing JWT authentication, REST APIs, and relational database design. I've gone through the full lifecycle of a production project: local development, debugging, and deployment on Render and Clever Cloud.</p>
+          <p>I'm actively working through Data Structures &amp; Algorithms with a structured daily approach — covering linked lists, stacks, queues, trees, and heaps — solving problems on LeetCode.</p>
+          <p>Outside code, I follow financial markets closely — part of why I built StockSim. I also play cricket, which has given me an appreciation for consistency and teamwork under pressure.</p>
         </div>
-        <div class="about-stats">
-          <div class="stat-card">
-            <div class="stat-number">2+</div>
-            <div class="stat-label">Full-stack projects</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">25d</div>
-            <div class="stat-label">DSA roadmap</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">5+</div>
-            <div class="stat-label">Technologies</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">2nd</div>
-            <div class="stat-label">Year B.Tech CS (AI)</div>
-          </div>
+        <div class="about-card">
+          <div class="ac-row"><span>Degree</span><span>B.Tech CS (AI)</span></div>
+          <div class="ac-row"><span>Year</span><span>2nd Year</span></div>
+          <div class="ac-row"><span>College</span><span>MIT Bengaluru</span></div>
+          <div class="ac-row"><span>Focus</span><span>Full-Stack Dev</span></div>
+          <div class="ac-row"><span>Interests</span><span>Markets · Cricket</span></div>
         </div>
       </div>
     </div>
   </section>
-
+ 
   <!-- SKILLS -->
-  <section id="skills" class="yes">
-    <div class="skillscontainer">
-      <div class="section-label">Skills</div>
-      <h2>My Tech Stack</h2>
-      <p class="section-desc">A mix of languages, frameworks, and tools I've used to build real projects.</p>
-      <div class="skillsgrid">
-        <div class="skillcard">
-          <h3>💻 Languages</h3>
-          <div class="skill-tags">
-            <span class="tag">Java</span>
-            <span class="tag">C</span>
-            <span class="tag">Python</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">SQL</span>
+  <section id="skills" class="section">
+    <div class="section-inner">
+      <div class="sec-label">02 — Skills</div>
+      <h2 class="sec-title">What I Work With</h2>
+      <div class="skills-grid">
+        <div class="skill-card sc-a">
+          <div class="sc-num">01</div>
+          <h3>Languages</h3>
+          <div class="sc-pills">
+            <span>Java</span><span>JavaScript</span><span>C</span><span>Python</span>
           </div>
         </div>
-        <div class="skillcard">
-          <h3>🌐 Frontend</h3>
-          <div class="skill-tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">EJS</span>
+        <div class="skill-card sc-b">
+          <div class="sc-num">02</div>
+          <h3>Web Dev</h3>
+          <div class="sc-pills">
+            <span>HTML &amp; CSS</span><span>Node.js</span><span>Express.js</span><span>EJS</span>
           </div>
         </div>
-        <div class="skillcard">
-          <h3>⚙️ Backend</h3>
-          <div class="skill-tags">
-            <span class="tag green">Node.js</span>
-            <span class="tag green">Express.js</span>
-            <span class="tag green">REST APIs</span>
-            <span class="tag green">JWT Auth</span>
+        <div class="skill-card sc-c">
+          <div class="sc-num">03</div>
+          <h3>Backend &amp; DB</h3>
+          <div class="sc-pills">
+            <span>MySQL</span><span>REST APIs</span><span>JWT Auth</span><span>bcrypt</span>
           </div>
         </div>
-        <div class="skillcard">
-          <h3>🗄️ Database &amp; Tools</h3>
-          <div class="skill-tags">
-            <span class="tag green">MySQL</span>
-            <span class="tag">Git</span>
-            <span class="tag">GitHub</span>
-            <span class="tag">Render</span>
-          </div>
-        </div>
-        <div class="skillcard">
-          <h3>🧠 CS Concepts</h3>
-          <div class="skill-tags">
-            <span class="tag">DSA</span>
-            <span class="tag">OOP</span>
-            <span class="tag">Operating Systems</span>
-            <span class="tag">DBMS</span>
+        <div class="skill-card sc-d">
+          <div class="sc-num">04</div>
+          <h3>Core CS</h3>
+          <div class="sc-pills">
+            <span>DSA</span><span>OOP</span><span>OS</span><span>DBMS</span>
           </div>
         </div>
       </div>
     </div>
   </section>
-
+ 
   <!-- PROJECTS -->
-  <section id="projects" class="yes">
-    <div class="projectscontainer">
-      <div class="section-label">Projects</div>
-      <h2>Things I've Built</h2>
-      <p class="section-desc">Real-world applications built from scratch — covering the full stack.</p>
-      <div class="projectsgrid">
-
-        <!-- StockSim -->
-        <div class="projectcard featured">
-          <div class="project-badge">⭐ Featured</div>
-          <h3>StockSim — Virtual NSE Trading Platform</h3>
-          <p>A full-stack virtual stock trading platform simulating real NSE market conditions. Features live stock prices via Yahoo Finance API, JWT authentication, portfolio tracking, buy/sell orders, and a leaderboard. Built end-to-end with MVC architecture and deployed on cloud infrastructure.</p>
-          <div class="techstack">
-            <span>Node.js</span>
-            <span>Express.js</span>
-            <span>MySQL</span>
-            <span>EJS</span>
-            <span>JWT</span>
-            <span>Yahoo Finance API</span>
-            <span>Render</span>
+  <section id="projects" class="section">
+    <div class="section-inner">
+      <div class="sec-label">03 — Projects</div>
+      <h2 class="sec-title">Things I've Built</h2>
+      <div class="projects-list">
+ 
+        <div class="proj-card pc-featured">
+          <div class="proj-top">
+            <span class="proj-tag">Full-Stack · Live</span>
+            <div class="proj-links">
+              <a href="https://stocksim-1-ty4c.onrender.com" target="_blank">Live ↗</a>
+              <a href="https://github.com/shivamm-15/Stocksim" target="_blank">GitHub ↗</a>
+            </div>
           </div>
-          <div class="projectlinks">
-            <a href="https://github.com/shivamm-15/Stocksim" target="_blank">GitHub →</a>
+          <h3>StockSim</h3>
+          <p>A full-stack virtual NSE stock trading platform. Users get ₹1,00,000 virtual money to trade real NSE-listed stocks using live prices from the Yahoo Finance API. Features include JWT authentication, portfolio tracking with real-time P&amp;L, a leaderboard ranked by net worth, transaction history, and a watchlist.</p>
+          <div class="proj-tech">
+            <span>Node.js</span><span>Express.js</span><span>MySQL</span>
+            <span>EJS</span><span>JWT</span><span>Yahoo Finance API</span>
           </div>
         </div>
-
-        <!-- Spotify Clone -->
-        <div class="projectcard">
-          <div class="project-badge blue">Frontend</div>
+ 
+        <div class="proj-card">
+          <div class="proj-top">
+            <span class="proj-tag">Full-Stack · DB Lab</span>
+            <div class="proj-links">
+              <a href="https://github.com/shivamm-15/CampusCare" target="_blank">GitHub ↗</a>
+            </div>
+          </div>
+          <h3>CampusCare</h3>
+          <p>A complaint and resolution management system for campus facilities. Students raise complaints, admins assign them to staff, tracking a three-stage lifecycle: OPEN → IN_PROGRESS → RESOLVED. Schema normalized to 3NF with proper foreign key constraints.</p>
+          <div class="proj-tech">
+            <span>Node.js</span><span>Express.js</span><span>MySQL</span><span>HTML/CSS/JS</span>
+          </div>
+        </div>
+ 
+        <div class="proj-card">
+          <div class="proj-top">
+            <span class="proj-tag">Frontend · UI Practice</span>
+            <div class="proj-links">
+              <a href="https://github.com/shivamm-15" target="_blank">GitHub ↗</a>
+            </div>
+          </div>
           <h3>Spotify Clone</h3>
-          <p>A responsive music player web application with play, pause, and album-based song navigation. Built to strengthen DOM manipulation, event handling, and JavaScript logic. Closely replicates Spotify's UI layout and interaction patterns.</p>
-          <div class="techstack">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-          <div class="projectlinks">
-            <a href="https://github.com/shivamm-15" target="_blank">GitHub →</a>
+          <p>A responsive music player web application with play, pause, and album-based song navigation. Built to strengthen DOM manipulation skills and JavaScript event handling logic.</p>
+          <div class="proj-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
           </div>
         </div>
-
+ 
       </div>
     </div>
   </section>
-
+ 
   <!-- CONTACT -->
-  <section id="contact" class="yes">
-    <div class="section-label">Contact</div>
-    <h2>Get In Touch</h2>
-    <p class="section-desc">Open to internship opportunities, collaborations, and project discussions.</p>
-    <div class="contactcontainer">
-      <div class="contactinfo">
-        <a href="https://www.linkedin.com/in/shivammishra15" target="_blank" class="contactcard">
-          <div class="contact-icon">💼</div>
-          <h3>LinkedIn</h3>
-          <span>shivammishra15</span>
+  <section id="contact" class="section">
+    <div class="section-inner">
+      <div class="sec-label">04 — Contact</div>
+      <h2 class="sec-title">Get In Touch</h2>
+      <p class="contact-sub">Open for internships, collaborations, or just a chat.</p>
+      <div class="contact-cards">
+        <a href="https://www.linkedin.com/in/shivammishra15" target="_blank" class="cc">
+          <div class="cc-icon li">in</div>
+          <div class="cc-info"><span class="cc-lbl">LinkedIn</span><span class="cc-val">shivammishra15</span></div>
+          <span class="cc-arr">→</span>
         </a>
-        <a href="https://github.com/shivamm-15" target="_blank" class="contactcard">
-          <div class="contact-icon">🐙</div>
-          <h3>GitHub</h3>
-          <span>shivamm-15</span>
+        <a href="https://github.com/shivamm-15" target="_blank" class="cc">
+          <div class="cc-icon gh">gh</div>
+          <div class="cc-info"><span class="cc-lbl">GitHub</span><span class="cc-val">shivamm-15</span></div>
+          <span class="cc-arr">→</span>
         </a>
-        <a href="mailto:Shivam1505mishra@gmail.com" class="contactcard">
-          <div class="contact-icon">✉️</div>
-          <h3>Email</h3>
-          <span>Shivam1505mishra@gmail.com</span>
+        <a href="mailto:Shivam1505mishra@gmail.com" class="cc">
+          <div class="cc-icon em">@</div>
+          <div class="cc-info"><span class="cc-lbl">Email</span><span class="cc-val">Shivam1505mishra@gmail.com</span></div>
+          <span class="cc-arr">→</span>
         </a>
-      </div>
-
-      <div class="contactform">
-        <h3>Send a Message</h3>
-        <form>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name">
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone (optional)</label>
-            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Hi Shivam, I'd like to discuss..."></textarea>
-          </div>
-          <button type="submit">Send Message</button>
-        </form>
       </div>
     </div>
   </section>
-
+ 
   <script src="index.js"></script>
 </body>
 </html>
