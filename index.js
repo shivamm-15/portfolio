@@ -1,49 +1,39 @@
-const roles = [
-    "Web Developer",
-    "Problem Solver",
-    "CS Student"
-];
+// ── SECTION SWITCHING ──
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav a[data-section]');
 
-let index = 0;
-const roleElement = document.querySelector(".role");
+function showSection(id) {
+  sections.forEach(sec => {
+    if (sec.id === id) {
+      sec.classList.remove('yes');
+      sec.classList.add('yesactive');
+    } else {
+      sec.classList.remove('yesactive');
+      sec.classList.add('yes');
+    }
+  });
 
-function changeRole() {
-    roleElement.style.opacity = 0;
-
-    setTimeout(() => {
-        index = (index + 1) % roles.length;
-        roleElement.textContent = roles[index];
-        roleElement.style.opacity = 1;
-    }, 400);
+  // Update active nav link
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.dataset.section === id);
+  });
 }
 
-roleElement.textContent = roles[0];
-setInterval(changeRole, 2000);
-
-
-/* NAVIGATION */
-
-const links = document.querySelectorAll("nav a");
-const pages = document.querySelectorAll("section");
-
-links.forEach(link => {
-    link.addEventListener("click", function(e) {
-        e.preventDefault();
-
-        const target = this.getAttribute("data-section");
-
-        pages.forEach(page => {
-            page.classList.remove("yesactive");
-            page.classList.add("yes");
-        });
-
-        const selected = document.getElementById(target);
-        selected.classList.remove("yes");
-        selected.classList.add("yesactive");
-        selected.classList.add("fade-in");
-
-setTimeout(() => {
-    selected.classList.remove("fade-in");
-}, 400);
-    });
+// Nav link clicks
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    showSection(link.dataset.section);
+  });
 });
+
+// "View Projects" button in hero
+document.querySelectorAll('[data-section="projects"]').forEach(el => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    showSection('projects');
+  });
+});
+
+// Set home as default active on load
+showSection('home');
